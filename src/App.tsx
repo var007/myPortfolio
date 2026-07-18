@@ -6,6 +6,7 @@ import Projects from './sections/Projects'
 import Services from './sections/Services'
 import Contact from './sections/Contact'
 import SocialLinks from './components/SocialLinks'
+import ChatBot from './components/ChatBot'
 import { useScrollParallax } from './hooks/useScrollParallax'
 import './styles/portfolio.css'
 
@@ -29,6 +30,7 @@ function App() {
         </p>
         <SocialLinks className="hero-social" />
       </footer>
+      <ChatBot />
     </>
   )
 }
