@@ -11,6 +11,7 @@ export function useScrollParallax() {
       const offset = Math.min(window.scrollY * 0.025, 20)
       document.documentElement.style.setProperty('--scroll-parallax', `${offset}px`)
       document.documentElement.style.setProperty('--scroll-parallax-reverse', `${offset * -0.45}px`)
+      document.documentElement.style.setProperty('--hero-mobile-parallax', `${offset * -1.25}px`)
     }
 
     const onScroll = () => {
@@ -26,6 +27,7 @@ export function useScrollParallax() {
       window.removeEventListener('scroll', onScroll)
       document.documentElement.style.removeProperty('--scroll-parallax')
       document.documentElement.style.removeProperty('--scroll-parallax-reverse')
+      document.documentElement.style.removeProperty('--hero-mobile-parallax')
     }
   }, [])
 }

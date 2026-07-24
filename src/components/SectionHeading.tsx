@@ -9,6 +9,8 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ label, title, text, centered }: SectionHeadingProps) {
   const [ref, inView] = useInView()
+  const titleMotionClass = label ? 'heading-motion-2' : 'heading-motion-1'
+  const textMotionClass = label ? 'heading-motion-3' : 'heading-motion-2'
 
   return (
     <div
@@ -16,8 +18,8 @@ export default function SectionHeading({ label, title, text, centered }: Section
       className={`section-heading${centered ? ' section-heading-centered' : ''}${inView ? ' in-view' : ''}`}
     >
       {label && <p className="section-heading-label heading-motion heading-motion-1">{label}</p>}
-      <h2 className="section-heading-title heading-motion heading-motion-2">{title}</h2>
-      {text && <p className="section-heading-text heading-motion heading-motion-3">{text}</p>}
+      <h2 className={`section-heading-title heading-motion ${titleMotionClass}`}>{title}</h2>
+      {text && <p className={`section-heading-text heading-motion ${textMotionClass}`}>{text}</p>}
     </div>
   )
 }

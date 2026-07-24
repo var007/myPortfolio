@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Download, Menu, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -20,10 +21,6 @@ export default function Navbar() {
   const lastScrollYRef = useRef(0)
 
   useEffect(() => {
-    const sections = navLinks
-      .map((link) => document.getElementById(link.href.slice(1)))
-      .filter((section): section is HTMLElement => Boolean(section))
-
     const onScroll = () => {
       const currentScrollY = window.scrollY
       const lastScrollY = lastScrollYRef.current
@@ -39,23 +36,52 @@ export default function Navbar() {
       }
 
       lastScrollYRef.current = currentScrollY
-
-      const scrollPosition = currentScrollY + 140
-      let currentSection = 'home'
-
-      for (const section of sections) {
-        if (section.offsetTop <= scrollPosition) {
-          currentSection = section.id
-        }
-      }
-
-      setActiveSection(currentSection)
     }
 
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [mobileOpen])
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.href.slice(1)))
+      .filter((section): section is HTMLElement => Boolean(section))
+
+    if (sections.length === 0 || !('IntersectionObserver' in window)) return
+
+    const visibleSections = new Set<string>()
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const sectionId = (entry.target as HTMLElement).id
+
+          if (entry.isIntersecting) {
+            visibleSections.add(sectionId)
+          } else {
+            visibleSections.delete(sectionId)
+          }
+        })
+
+        const nextActiveSection = sections
+          .map((section) => section.id)
+          .findLast((sectionId) => visibleSections.has(sectionId))
+
+        if (nextActiveSection) {
+          setActiveSection(nextActiveSection)
+        }
+      },
+      {
+        rootMargin: '-42% 0px -57% 0px',
+        threshold: 0,
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     if (mobileOpen) {
@@ -125,21 +151,25 @@ export default function Navbar() {
             })}
           </div>
 
-          <a href="/Ivar-Hinisan-CV.pdf" className="navbar-cta navbar-desktop-cta" download>
-            <Download size={16} aria-hidden="true" />
-            Download CV
-          </a>
+          <div className="navbar-actions">
+            <a href="/Ivar-Hinisan-CV.pdf" className="navbar-cta navbar-desktop-cta" download>
+              <Download size={16} aria-hidden="true" />
+              Download CV
+            </a>
 
-          <button
-            ref={mobileToggleRef}
-            className="navbar-mobile-toggle"
-            onClick={toggleMobile}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-navigation"
-          >
-            {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
-          </button>
+            <ThemeToggle />
+
+            <button
+              ref={mobileToggleRef}
+              className="navbar-mobile-toggle"
+              onClick={toggleMobile}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
+            >
+              {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            </button>
+          </div>
         </nav>
       </header>
 

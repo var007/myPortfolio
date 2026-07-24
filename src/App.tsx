@@ -5,7 +5,7 @@ import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Services from './sections/Services'
 import Contact from './sections/Contact'
-import SocialLinks from './components/SocialLinks'
+import Footer from './components/Footer'
 import ChatBot from './components/ChatBot'
 import { useScrollParallax } from './hooks/useScrollParallax'
 import './styles/portfolio.css'
@@ -24,12 +24,7 @@ function App() {
         <Services />
         <Contact />
       </main>
-      <footer className="footer">
-        <p className="footer-text">
-          &copy; {new Date().getFullYear()} Ivar Hinisan. All rights reserved.
-        </p>
-        <SocialLinks className="hero-social" />
-      </footer>
+      <Footer />
       <ChatBot />
     </>
   )
