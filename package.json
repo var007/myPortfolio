@@ -1,0 +1,11 @@
+{
+  "name": "ivar-hinisan-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix webPortfolio run dev",
+    "build": "npm --prefix webPortfolio run build",
+    "lint": "npm --prefix webPortfolio run lint",
+    "preview": "npm --prefix webPortfolio run preview"
+  }
+}

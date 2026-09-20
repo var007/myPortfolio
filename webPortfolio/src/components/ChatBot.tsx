@@ -69,7 +69,7 @@ function getTemplateReply(input: string) {
   }
 
   if (includesAny(question, ['experience', 'years', 'client', 'stats'])) {
-    return 'Ivar has 1+ years of experience, 10+ completed projects, experience with 5+ technologies, and 3+ happy clients.'
+    return 'Ivar has 1 year of experience, 5 completed projects, experience with 5 technologies, and is currently building his client portfolio.'
   }
 
   if (includesAny(question, ['project', 'projects', 'portfolio', 'built', 'made', 'work'])) {

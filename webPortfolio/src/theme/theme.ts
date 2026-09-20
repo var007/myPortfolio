@@ -8,7 +8,7 @@ export interface ThemeContextValue {
   toggleTheme: () => void
 }
 
-export const THEME_STORAGE_KEY = 'theme'
+export const THEME_STORAGE_KEY = 'portfolio-theme'
 export const DEFAULT_THEME: Theme = 'dark'
 export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 

@@ -11,19 +11,19 @@
     ],
     "stats": [
       {
-        "number": "1+",
-        "label": "Years Experience"
+        "number": "1",
+        "label": "Year of Experience"
       },
       {
-        "number": "10+",
+        "number": "5",
         "label": "Projects Completed"
       },
       {
-        "number": "5+",
+        "number": "5",
         "label": "Technologies Mastered"
       },
       {
-        "number": "3+",
+        "number": "0",
         "label": "Happy Clients"
       }
     ]
