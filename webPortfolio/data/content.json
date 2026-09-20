@@ -1,0 +1,263 @@
+{
+  "profile": {
+    "name": "Ivar Hinisan",
+    "role": "IT Student & Frontend Developer",
+    "location": "Philippines"
+  },
+  "about": {
+    "bio": [
+      "I'm an IT student and frontend developer who is passionate about building clean, modern, and user-friendly interfaces. I enjoy turning ideas into real-world solutions through code and design.",
+      "I continuously explore new technologies and improve my skills to deliver experiences that are not only functional but also polished and enjoyable to use."
+    ],
+    "stats": [
+      {
+        "number": "1+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "10+",
+        "label": "Projects Completed"
+      },
+      {
+        "number": "5+",
+        "label": "Technologies Mastered"
+      },
+      {
+        "number": "3+",
+        "label": "Happy Clients"
+      }
+    ]
+  },
+  "contact": {
+    "email": "ivarhinisan@email.com",
+    "phone": "+63 912 345 6789",
+    "location": "Philippines",
+    "socials": {
+      "github": "https://github.com/ivarhinisan",
+      "linkedin": "https://linkedin.com/in/ivarhinisan",
+      "facebook": "https://facebook.com/ivarhinisan"
+    }
+  },
+  "projects": [
+    {
+      "title": "DriveHub Premium Car Rental",
+      "description": "A polished luxury car rental experience that helps customers explore premium vehicles and reserve the right car through a fast, refined booking flow.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Responsive UI"
+      ],
+      "features": [
+        "Premium vehicle catalog",
+        "Streamlined reservations",
+        "Responsive browsing experience",
+        "Modern luxury interface"
+      ],
+      "github": "https://github.com/var007/premiumcarRental.git",
+      "live": "https://premiumcar-rental-admin.vercel.app/",
+      "image": "/projects/drivehub.png?v=2",
+      "imageAlt": "DriveHub premium car rental landing page"
+    },
+    {
+      "title": "Auralis Dental Booking",
+      "description": "An approachable dental appointment platform that presents clinic services clearly and makes it simple for patients to schedule care online.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Booking System"
+      ],
+      "features": [
+        "Online appointment booking",
+        "Dental service discovery",
+        "Patient-friendly workflow",
+        "Responsive clinic website"
+      ],
+      "github": "https://github.com/var007/dentalBooking.git",
+      "live": "https://my-dental-booking.vercel.app/",
+      "image": "/projects/auralis-dental.png?v=2",
+      "imageAlt": "Auralis Dental booking website landing page"
+    },
+    {
+      "title": "Kafé",
+      "description": "A warm specialty coffee shop website designed to showcase the café atmosphere, highlight the brand, and encourage guests to reserve a table.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Responsive Design"
+      ],
+      "features": [
+        "Immersive café presentation",
+        "Table reservation experience",
+        "Location and brand storytelling",
+        "Mobile-friendly layout"
+      ],
+      "github": "",
+      "live": "https://kafe-ashen.vercel.app/",
+      "image": "/projects/kafe.png?v=2",
+      "imageAlt": "Kafé specialty coffee shop landing page"
+    },
+    {
+      "title": "NetServe ISP Support Console",
+      "description": "An internal customer support workspace for ISP teams to document concerns, use approved answers, manage follow-ups, and track service trends.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Supabase"
+      ],
+      "features": [
+        "Guided support reporting",
+        "Curated knowledge base",
+        "Follow-up and escalation tracking",
+        "Reports and service analytics"
+      ],
+      "github": "https://github.com/var007/customerService.git",
+      "live": "https://customerservice-sand.vercel.app/",
+      "image": "/projects/netserve.png?v=2",
+      "imageAlt": "NetServe ISP support console login page"
+    }
+  ],
+  "skills": [
+    {
+      "id": "boss",
+      "name": "React",
+      "description": "Building interactive and reusable user interfaces with modern component architecture.",
+      "icon": "code2",
+      "logo": "React",
+      "illustration": "mobile",
+      "category": "Frontend"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "description": "Designing safer frontend systems with typed data models, reusable interfaces, and predictable code.",
+      "icon": "code2",
+      "logo": "TS",
+      "illustration": "code",
+      "category": "Language"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "description": "Creating expressive browser experiences with clean logic, async flows, and polished interactions.",
+      "icon": "terminal",
+      "logo": "JS",
+      "illustration": "cube",
+      "category": "Language"
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "description": "Crafting consistent, responsive interfaces through utility-first styling and scalable design tokens.",
+      "icon": "palette",
+      "logo": "TW",
+      "illustration": "ui",
+      "category": "Styling"
+    },
+    {
+      "id": "node",
+      "name": "Node.js",
+      "description": "Connecting frontend experiences to lightweight APIs, server logic, and real-world application workflows.",
+      "icon": "server",
+      "logo": "Node",
+      "illustration": "server",
+      "category": "Backend"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "description": "Managing clean version history, branching workflows, and collaborative development practices.",
+      "icon": "gitbranch",
+      "logo": "Git",
+      "illustration": "graph",
+      "category": "Workflow"
+    },
+    {
+      "id": "next",
+      "name": "Next.js",
+      "description": "Structuring fast React applications with production-minded routing, rendering, and deployment patterns.",
+      "icon": "layout",
+      "logo": "Next",
+      "illustration": "ui",
+      "category": "Frontend"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "description": "Translating ideas into refined visual systems, prototypes, and developer-ready interface details.",
+      "icon": "palette",
+      "logo": "Figma",
+      "illustration": "design",
+      "category": "Design"
+    },
+    {
+      "id": "database",
+      "name": "Databases",
+      "description": "Modeling application data with practical schemas, CRUD workflows, and reliable persistence patterns.",
+      "icon": "database",
+      "logo": "DB",
+      "illustration": "database",
+      "category": "Backend"
+    },
+    {
+      "id": "responsive",
+      "name": "Responsive UI",
+      "description": "Designing adaptive layouts that feel intentional across desktop, tablet, and mobile screens.",
+      "icon": "smartphone",
+      "logo": "UI",
+      "illustration": "mobile",
+      "category": "Frontend"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Maintaining project repositories with clear commits, pull requests, and organized delivery workflows.",
+      "icon": "gitbranch",
+      "logo": "GH",
+      "illustration": "graph",
+      "category": "Workflow"
+    },
+    {
+      "id": "cli",
+      "name": "CLI",
+      "description": "Using command-line tooling to run builds, debug issues, manage packages, and automate development tasks.",
+      "icon": "terminal",
+      "logo": "CLI",
+      "illustration": "terminal",
+      "category": "Workflow"
+    }
+  ],
+  "services": [
+    {
+      "id": "frontend",
+      "title": "Frontend Development",
+      "desc": "Clean, responsive interfaces built with modern React, TypeScript, and maintainable component patterns.",
+      "expandedDesc": "Building scalable frontend applications using React, TypeScript, reusable component architecture, performance optimization, and modern UI systems.",
+      "icon": "code2",
+      "variant": "large-tall"
+    },
+    {
+      "id": "responsive",
+      "title": "Responsive Web Design",
+      "desc": "Layouts that feel balanced and polished across desktop, tablet, and mobile screen sizes.",
+      "expandedDesc": "Designing fluid page systems with intentional breakpoints, readable spacing, touch-friendly structure, and polished experiences across desktop, tablet, and mobile.",
+      "icon": "layout",
+      "variant": "medium-tall"
+    },
+    {
+      "id": "uiux",
+      "title": "UI/UX Refinement",
+      "desc": "Thoughtful interaction details, readable typography, and visual systems that make products easier to use.",
+      "expandedDesc": "Refining typography, interaction details, hierarchy, accessibility, and visual systems so digital products feel easier, cleaner, and more premium to use.",
+      "icon": "palette",
+      "variant": "wide"
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile Experience",
+      "desc": "Touch-friendly flows and adaptive screens for web and mobile-focused user experiences.",
+      "expandedDesc": "Creating compact, thumb-friendly interfaces with responsive flows, clean information density, smooth feedback, and reliable mobile-first interaction patterns.",
+      "icon": "smartphone",
+      "variant": "bottom"
+    }
+  ]
+}
