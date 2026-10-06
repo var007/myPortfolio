@@ -1,5 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import fallbackJson from '../../data/content.json'
+import resumeUrl from '../../assets/IvanHinisanCV.pdf?url'
 import {
   Code2,
   Database,
@@ -27,6 +28,13 @@ export const ICON_MAP: Record<IconKey, LucideIcon> = {
 function publicContent(content: ContentData): ContentData {
   return {
     ...content,
+    profile: {
+      ...content.profile,
+      meta: {
+        ...content.profile.meta,
+        resume: content.profile.meta?.resume === '/assets/IvanHinisanCV.pdf' ? resumeUrl : content.profile.meta?.resume,
+      },
+    },
     projects: content.settings?.showProjects === false ? [] : content.projects
       .filter((project) => project.meta?.visible !== false && (!project.meta?.status || project.meta.status === 'Published'))
       .sort((a, b) => Number(Boolean(b.meta?.featured)) - Number(Boolean(a.meta?.featured)) || (a.meta?.order ?? 0) - (b.meta?.order ?? 0)),

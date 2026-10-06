@@ -13,7 +13,7 @@ function HeroButtons() {
         View My Projects
         <ArrowRight size={18} aria-hidden="true" />
       </a>
-      {resume && <a href={resume} className="btn-secondary hero-button hero-button-secondary" download>
+      {resume && <a href={resume} className="btn-secondary hero-button hero-button-secondary" download="IvanHinisanCV.pdf">
         <Download size={18} aria-hidden="true" />
         Download CV
       </a>}

@@ -85,7 +85,7 @@ function getTemplateReply(input: string) {
   }
 
   if (includesAny(question, ['who', 'about', 'ivar', 'profile', 'student', 'developer'])) {
-    return 'Ivar Hinisan is an IT student and frontend developer who builds clean, modern, and user-friendly web and mobile interfaces.'
+    return 'Ivar Hinisan is an IT professional and frontend developer who builds clean, modern, and user-friendly web and mobile interfaces.'
   }
 
   return 'I can answer questions about Ivar\'s skills, projects, services, CV, and contact details. For anything specific, you can also email him at ivarhinisan@email.com.'

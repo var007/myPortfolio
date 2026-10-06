@@ -163,7 +163,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-actions">
-            {resume && <a href={resume} className="navbar-cta navbar-desktop-cta" download>
+            {resume && <a href={resume} className="navbar-cta navbar-desktop-cta" download="IvanHinisanCV.pdf">
               <Download size={16} aria-hidden="true" />
               Download CV
             </a>}
@@ -211,7 +211,7 @@ export default function Navbar() {
             </a>
           )
         })}
-        {resume && <a href={resume} className="navbar-cta mobile-cta" onClick={closeMobile} download>
+        {resume && <a href={resume} className="navbar-cta mobile-cta" onClick={closeMobile} download="IvanHinisanCV.pdf">
           <Download size={16} aria-hidden="true" />
           Download CV
         </a>}

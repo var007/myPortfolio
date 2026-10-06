@@ -1,12 +1,15 @@
 {
   "profile": {
     "name": "Ivar Hinisan",
-    "role": "IT Student & Frontend Developer",
-    "location": "Philippines"
+    "role": "IT Professional & Frontend Developer",
+    "location": "Philippines",
+    "meta": {
+      "resume": "/assets/IvanHinisanCV.pdf"
+    }
   },
   "about": {
     "bio": [
-      "I'm an IT student and frontend developer who is passionate about building clean, modern, and user-friendly interfaces. I enjoy turning ideas into real-world solutions through code and design.",
+      "I'm an IT professional and frontend developer who is passionate about building clean, modern, and user-friendly interfaces. I enjoy turning ideas into real-world solutions through code and design.",
       "I continuously explore new technologies and improve my skills to deliver experiences that are not only functional but also polished and enjoyable to use."
     ],
     "stats": [
@@ -29,13 +32,13 @@
     ]
   },
   "contact": {
-    "email": "ivarhinisan@email.com",
+    "email": "ivanhinisan@gmail.com",
     "phone": "+63 912 345 6789",
     "location": "Philippines",
     "socials": {
-      "github": "https://github.com/ivarhinisan",
-      "linkedin": "https://linkedin.com/in/ivarhinisan",
-      "facebook": "https://facebook.com/ivarhinisan"
+      "github": "https://github.com/var007",
+      "linkedin": "https://www.linkedin.com/in/ivar-hinisan-15396b346/?isSelfProfile=true",
+      "facebook": "https://web.facebook.com/ivarzki/"
     }
   },
   "projects": [

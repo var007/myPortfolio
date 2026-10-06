@@ -4,6 +4,7 @@ import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import SectionSideLabel from '../components/SectionSideLabel'
 import { useContent } from '../data/useContent'
+import { gmailComposeUrl } from '../utils/email'
 
 interface ContactMotionStyle extends CSSProperties {
   '--contact-delay': string
@@ -60,7 +61,9 @@ function ContactMethodItem({ method }: { method: ContactMethod }) {
       <span className="contact-method-copy">
         <span className="contact-method-label">{method.label}</span>
         {method.href ? (
-          <a className="contact-method-value contact-method-link" href={method.href} aria-label={method.ariaLabel}>
+          <a className="contact-method-value contact-method-link" href={method.href} aria-label={method.ariaLabel}
+            target={method.href.startsWith('https:') ? '_blank' : undefined}
+            rel={method.href.startsWith('https:') ? 'noopener noreferrer' : undefined}>
             {method.value}
           </a>
         ) : (
@@ -77,7 +80,7 @@ function ContactInfoCard({ inView }: ContactSectionChildProps) {
     {
       label: 'Email',
       value: content.contact.email,
-      href: `mailto:${content.contact.email}`,
+      href: gmailComposeUrl(content.contact.email),
       ariaLabel: `Email ${content.profile.name} at ${content.contact.email}`,
       icon: Mail,
     },
@@ -131,7 +134,7 @@ function DirectContactCard({ inView }: ContactSectionChildProps) {
         <p className="contact-info-copy">
           The quickest way to discuss a project or collaboration is by email. I will reply as soon as possible.
         </p>
-        <a className="btn-primary contact-submit-button" href={`mailto:${content.contact.email}`}>
+        <a className="btn-primary contact-submit-button" href={gmailComposeUrl(content.contact.email)} target="_blank" rel="noopener noreferrer">
           <Mail size={18} aria-hidden="true" />
           <span>Email Me</span>
         </a>

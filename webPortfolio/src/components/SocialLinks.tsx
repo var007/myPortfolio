@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react'
 import { useContent } from '../data/useContent'
+import { gmailComposeUrl } from '../utils/email'
 
 const GitHubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true" focusable="false">
@@ -29,7 +30,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
     { label: 'GitHub', href: content.contact.socials.github, icon: GitHubIcon },
     { label: 'LinkedIn', href: content.contact.socials.linkedin, icon: LinkedInIcon },
     { label: 'Facebook', href: content.contact.socials.facebook, icon: FacebookIcon },
-    { label: 'Email', href: `mailto:${content.contact.email}`, icon: Mail },
+    { label: 'Email via Gmail', href: gmailComposeUrl(content.contact.email), icon: Mail },
   ]
 
   return (
